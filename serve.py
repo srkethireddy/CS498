@@ -8,7 +8,7 @@ app = Flask(__name__)
 def handle_requests():
     if request.method == 'POST':
         try:
-            subprocess.Popen(['python', 'stress_cpu.py'])
+            subprocess.Popen(['python3', 'stress_cpu.py'])
             return 'CPU stress started!', 200
         except Exception as e:
             return f'Error: {str(e)}', 500
